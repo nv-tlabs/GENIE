@@ -1,0 +1,595 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script> 
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style type="text/css">
+body {
+    font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    font-size: 17px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 980px){
+    body {
+        width: 980px;
+    }
+}
+
+h1 {
+    font-weight:300;
+    line-height: 1.15em;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+a:link,a:visited {
+    color: #B6486F;
+    text-decoration: none;
+}
+a:hover {
+    color: #208799;
+}
+h1, h2 {
+    text-align: center;
+}
+h1 {
+    font-size: 40px;
+    font-weight: 500;
+}
+h2 {
+    font-weight: 400;
+    margin: 16px 0px 4px 0px;
+}
+h3 {
+    display: inline;
+}
+.paper-title {
+    padding: 16px 0px 16px 0px;
+}
+section {
+    margin: 32px 0px 32px 0px;
+    text-align: justify;
+    clear: both;
+}
+.col-5 {
+     width: 20%;
+     float: left;
+}
+.col-4 {
+     width: 25%;
+     float: left;
+}
+.col-3 {
+     width: 33%;
+     float: left;
+}
+.col-2 {
+     width: 50%;
+     float: left;
+}
+.col-1 {
+     width: 100%;
+     float: left;
+}
+
+.author-row, .affil-row {
+    font-size: 26px;
+}
+
+.author-row-new { 
+    text-align: center; 
+}
+
+.author-row-new a {
+    display: inline-block;
+    font-size: 26px;
+    padding: 15px;
+}
+
+.author-row-new sup {
+    color: #313436;
+    font-size: 60%;
+}
+
+.affiliations-new {
+    font-size: 18px;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.row {
+    margin: 16px 0px 16px 0px;
+}
+.authors {
+    font-size: 26px;
+}
+.affiliatons {
+    font-size: 18px;
+}
+.affil-row {
+    margin-top: 18px;
+}
+.teaser {
+    max-width: 100%;
+}
+.text-center {
+    text-align: center;  
+}
+.inline-title h3 {
+      display: inline;
+    }
+.screenshot {
+    width: 256px;
+    border: 1px solid #ddd;
+}
+.screenshot-el {
+    margin-bottom: 16px;
+}
+hr {
+    height: 1px;
+    border: 0; 
+    border-top: 1px solid #ddd;
+    margin: 0;
+}
+.material-icons {
+    vertical-align: -6px;
+}
+p {
+    line-height: 1.25em;
+}
+.caption {
+    font-size: 16px;
+    color: #666;
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+video {
+    display: block;
+    margin: auto;
+}
+figure {
+    display: inline-block;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+figure figcaption {
+    text-align: center;
+    font-size: 14px;
+}
+#bibtex pre {
+    font-size: 14px;
+    background-color: #eee;
+    padding: 16px;
+}
+.blue {
+    color: #2c82c9;
+    font-weight: bold;
+}
+.orange {
+    color: #d35400;
+    font-weight: bold;
+}
+.flex-row {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.wrapper {
+    display: flex;
+}
+
+.paper-btn-coming-soon {
+    position: relative; 
+    top: 0;
+    left: 0;
+}
+
+.coming-soon {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+}
+
+.paper-btn {
+  position: relative;
+  text-align: center;
+
+  display: inline-block;
+  margin: 8px;
+  padding: 8px 8px;
+
+  border-width: 0;
+  outline: none;
+  border-radius: 2px;
+  
+  background-color: #B6486F;
+  color: white !important;
+  font-size: 20px;
+  width: 100px;
+  font-weight: 600;
+}
+.paper-btn-parent {
+    display: flex;
+    justify-content: center;
+    margin: 16px 0px;
+}
+
+.paper-btn:hover {
+    opacity: 0.85;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.venue {
+    font-size: 30px;
+}
+
+.topnav {
+    background-color: #EEEEEE;
+    overflow: hidden;
+}
+
+.topnav div {
+    max-width: 1070px;
+    margin: 0 auto;
+}
+
+.topnav a {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 16px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.topnav img {
+    padding: 2px 0px;
+    width: 100%;
+    margin: 0.2em 0px 0.3em 0px;
+    vertical-align: middle;
+}
+
+pre {
+    font-size: 0.9em;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 3px;
+    background-color: rgb(235, 235, 235);
+    overflow-x: auto;
+}
+
+.download-thumb {
+    display: flex;
+}
+
+@media only screen and (max-width: 620px) {
+    .download-thumb {
+        display: none;
+    }
+}
+
+.paper-stuff {
+    width: 50%;
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 620px) {
+    .paper-stuff {
+        width: 100%;
+    }
+}
+
+</style>
+
+<script type="text/javascript" src="../js/hidebib.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+    <head>
+        <title>GENIE: Higher-Order Denoising Diffusion Solvers</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta property="og:description" content="GENIE: Higher-Order Denoising Diffusion Solvers"/>
+        <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:creator" content="@timudk">
+        <meta name="twitter:title" content="GENIE: Higher-Order Denoising Diffusion Solvers">
+    </head>
+
+ <body>
+<div class="topnav" id="myTopnav">
+    <div>
+        <a href="https://www.nvidia.com/"><img width="100%" src="assets/nvidia.svg"></a>
+        <a href="https://nv-tlabs.github.io/" ><strong>Toronto AI Lab</strong></a>
+    </div>
+</div>
+<div class="container">
+    <div class="paper-title">
+      <h1><span style="color: #A03F77">GENIE</span>: Hi<span style="color: #A03F77">g</span>her-Ord<span style="color: #A03F77">e</span>r De<span style="color: #A03F77">n</span>oising Diffus<span style="color: #A03F77">i</span>on Solv<span style="color: #A03F77">e</span>rs</h1> 
+    </div>
+
+    <div id="authors">
+    	<center>
+            <div class="author-row-new">
+                <a href="https://timudk.github.io/">Tim Dockhorn<sup>1,2,3</sup></a>
+                <a href="http://latentspace.cc/">Arash Vahdat<sup>1</sup></a>
+                <a href="https://karstenkreis.github.io/">Karsten Kreis<sup>1</sup></a>
+            </div>
+        </center>
+        <center>
+        <div class="affiliations">
+            <span><sup>1</sup> NVIDIA</span>
+            <span><sup>2</sup> University of Waterloo</span>
+            <span><sup>3</sup> Vector Institute</span> <br/>
+        </div>
+
+        <div class="affil-row">
+            <div class="venue text-center"><b>NeurIPS 2022</b></div>
+        </div>
+
+        </center>
+
+        <div style="clear: both">
+            <div class="paper-btn-parent">
+            <a class="paper-btn" href="https://arxiv.org/abs/2210.05475">
+                <span class="material-icons"> description </span> 
+                 Paper
+            </a>
+            <div class="paper-btn-coming-soon">
+                <a class="paper-btn" href="https://github.com/nv-tlabs/GENIE">
+                    <span class="material-icons"> code </span>
+                    Code
+                </a>
+            </div>
+        </div></div>
+    </div>
+    <br>
+
+    <section id="teaser-image">
+            </p><figure style="margin-top: 20px; margin-bottom: 20px;">
+                <img width="100%" src="./assets/genie_pipeline.png" style="margin-bottom: 20px;">
+                <p class="caption">
+                    Our novel <i>Higher-Order Denoising Diffusion Solver</i> (GENIE) relies on the second <i>truncated Taylor method</i> (TTM) to simulate a 
+                    (re-parameterized) Probability Flow ODE for sampling from denoising diffusion models. The second TTM captures the local curvature 
+                    of the ODE's gradient field and enables more accurate extrapolation and larger step sizes than the first TTM (Euler's method), 
+                    which previous methods such as DDIM utilize.
+                </p><p class="caption">
+            </p>
+    </section>
+
+    <section id="news">
+        <h2>News</h2>
+        <hr>
+        <div class="row">
+            <div><span class="material-icons"> event </span> [Oct 2022] <a href="https://nv-tlabs.github.io/GENIE">Project page</a> released!</div>
+            <div><span class="material-icons"> event </span> [Oct 2022] Paper released on <a href="https://arxiv.org/abs/2210.05475">arXiv</a>!</div>
+        </div>
+    </section>
+
+    <section id="abstract"/>
+        <h2>Abstract</h2>
+        <hr>
+        <div class="flex-row">
+            <p>
+                Denoising diffusion models (DDMs) have emerged as a powerful class of generative models. A forward diffusion process slowly perturbs the data, while 
+                a deep model learns to gradually denoise. Synthesis amounts to solving a differential equation (DE) defined by the learnt model. Solving the DE requires 
+                slow iterative solvers for high-quality generation. In this work, we propose <i>Higher-Order Denoising Diffusion Solvers</i> (GENIE): Based on truncated 
+                Taylor methods, we derive a novel higher-order solver that significantly accelerates synthesis. Our solver relies on higher-order gradients of the perturbed 
+                data distribution, that is, higher-order score functions. In practice, only Jacobian-vector products (JVPs) are required and we propose to extract them from 
+                the first-order score network via automatic differentiation. We then distill the JVPs into a separate neural network that allows us to efficiently compute 
+                the necessary higher-order terms for our novel sampler during synthesis. We only need to train a small additional head on top of the first-order score 
+                network. We validate GENIE on multiple image generation benchmarks and demonstrate that GENIE outperforms all previous solvers. Unlike recent methods that 
+                fundamentally alter the generation process in DDMs, our GENIE solves the true generative DE and still enables applications such as encoding and guided sampling.
+            </p>
+        </div>
+    </section>
+
+
+    <section id="intro"/>
+        <h2>Higher-Order Denoising Diffusion Solvers</h2>
+        <hr>
+        <div class="flex-row">
+            <p> In DDMs, a diffusion process gradually perturbs the data towards random noise, while a deep neural network learns to denoise. 
+                Formally, the problem reduces to learning the <i>score function</i>, i.e., the gradient of the log-density of the perturbed data. The (approximate) inverse 
+                of the forward diffusion can be described by an ordinary or a stochastic differential equation (ODE or SDE, respectively), defined by the learned score function, 
+                and can therefore be used for generation when starting from random noise.
+            </p>
+            <p> A crucial drawback of DDMs is that the generative ODE or SDE is typically difficult to solve, due to the complex score function. Therefore, efficient and tailored 
+                samplers are required for fast synthesis. In this work, building on the generative ODE, we rigorously derive a novel second-order ODE solver using <i>truncated 
+                Taylor methods</i> (TTMs). These higher-order methods require higher-order gradients of the ODE—in our case this includes higher-order gradients of the log-density of 
+                the perturbed data, i.e., higher-order score functions. Because such higher-order scores are usually not available, existing works typically use simple first-order 
+                solvers or samplers with low accuracy, higher-order methods that rely on suboptimal finite difference or other approximations, or alternative approaches for accelerated 
+                sampling. Here, we fundamentally avoid such approximations and directly model the higher-order gradient terms: Importantly, our novel <i>Higher-Order Denoising Diffusion 
+                Solver</i> (GENIE) relies on Jacobian-vector products (JVPs) involving second-order scores. We propose to calculate these JVPs by automatic differentiation of the 
+                regular learnt first-order scores. For computational efficiency, we then distill the entire higher-order gradient of the ODE, including the JVPs, into a separate neural 
+                network. In practice, we only need to add a small head to the first-order score network to predict the components of the higher-order ODE gradient. By directly modeling 
+                the JVPs we avoid explicitly forming high-dimensional higher-order scores. Intuitively, the higher-order terms in GENIE capture the local curvature of the ODE and enable 
+                larger steps when iteratively solving the generative ODE.
+            </p>
+        </div>
+    </section>
+
+    <section id="novelties"/>
+        <h2>Technical Contributions</h2>
+        <hr>
+        <div class="flex-row">
+            <p>
+                <ul style="list-style-type:disc;">
+                    <li>We introduce GENIE, a novel second-order ODE solver for fast DDM sampling.</li>
+                    <li>We propose to extract the required higher-order terms from the first-order score model by automatic differentiation. In contrast to existing works, we explicitly work with higher-order scores without finite difference approximations.</li>
+                    <li>We propose to directly model the necessary higher-order derivative and distill it into a small neural network.</li> 
+                    <li>We outperform all previous solvers and samplers for the generative differential equations of DDMs on multiple popular image generation benchmarks.</li>
+                </ul>
+            </p>
+        </div>
+    </section>
+
+    <section id="method"/>
+        <h2>Method Overview</h2>
+        <hr>
+        <div class="flex-row">
+            <p> 
+                The so-known DDIM solver is simply Euler's method applied to a reparameterization of the Probability Flow ODE. In this work, we apply the second TTM
+                to this re-parameterized ODE, which results in the GENIE scheme (simplified notation; see paper for details)
+            <p style="text-align: center; width: 100%">
+                \(\mathbf{x}_{t_{n+1}} = \mathbf{x}_{t_n} + h_n \mathbf{\epsilon}_\mathbf{\theta}(\mathbf{x}_{t_n}, t_n) + \frac{1}{2} h_n^2 \frac{d\mathbf{\epsilon}_\mathbf{\theta}}{dt}(\mathbf{x}_{t_n}, t_n).\)
+            </p>
+            <p> 
+                Intuitively, the higher-order gradient term \(\frac{d\mathbf{\epsilon}_\mathbf{\theta}}{dt}\) used in GENIE models the local curvature of the ODE. This 
+                translates into a Taylor formula-based extrapolation that is quadratic in time and more accurate than linear extrapolation as in DDIM, thereby enabling larger time steps (see visualization above). We showcase the benefit of GENIE on a 2D toy distribution (see visualization below)
+                for which we know \(\mathbf{\epsilon}_\mathbf{\theta}\) and \(\frac{d\mathbf{\epsilon}_\mathbf{\theta}}{dt}\) analytically.
+            </p>
+        </div>
+
+        <div class="wrapper">
+            <center>
+            <figure>
+            <img width="70%" src="./assets/gt_samples.png" style="margin-bottom: 0px;">
+            <figcaption>(a) Ground truth</figcaption>
+            </center>
+            </figure>
+            <figure>
+            <center>
+            <img width="70%" src="./assets/ddim_n_25.png" style="margin-bottom: 0px;">
+            <figcaption>(b) DDIM </figcaption>
+            </center>
+            </figure>
+            <figure>
+            <center>
+            <img width="70%" src="./assets/genie_n_25.png" style="margin-bottom: 0px;">
+            <figcaption>(c) GENIE</figcaption>
+            </center>
+            </figure>
+        </div>  
+        <p style="margin-bottom: 50px;" class="caption">
+            Modeling a complex 2D toy distribution: Samples in (b) and (c) are generated via DDIM and GENIE, respectively, with 25 solver 
+            steps using the analytical score function of the ground truth distribution.
+        </p><p class="caption">
+
+        <div class="inline-title">
+            <p> 
+                <b>Learning Higher-Order Derivatives.</b> Regular DDMs learn a model \(\mathbf{\epsilon}_\mathbf{\theta}\) for the first-order score; 
+                however, the higher-order gradient term \(\frac{d\mathbf{\epsilon}_\mathbf{\theta}}{dt}\) required for GENIE is not immediately 
+                available to us, unlike in the toy example above. Given a DDM, that is, given \(\mathbf{\epsilon}_\mathbf{\theta}\), we could compute the higher-order derivative using automatic differentiation
+                (AD). This would, however, make a single step of GENIE at least twice as costly as DDIM. To avoid this overhead, we propose to first distill 
+                the higher-order derivative into a separate neural network \(\mathbf{k}_\mathbf{\psi}\). We implement this neural network as a small prediction 
+                head on top of the standard DDM U-Net. During distillation training, we use the slow AD-based calculation of the higher-order derivative, 
+                but during synthesis we call the fast network \(\mathbf{k}_\mathbf{\psi}\). The model structure is visualized below.
+            </p>
+        </div>
+        <center>
+        <div class="wrapper">
+            <figure>
+            <img width="70%" src="./assets/blocks.png" style="margin-bottom: 0px;">
+            </figure>
+        </div>  
+        </center>
+        <p class="caption">
+            Our distilled model \(\mathbf{k}_\mathbf{\psi}\) that predicts the gradient \(\frac{d\mathbf{\epsilon}_\mathbf{\theta}}{dt}\) is implemented as a 
+            small additional output head on top of the first-order score model \(\mathbf{\epsilon}_\mathbf{\theta}.\) This model structure makes the evaluation of \(\mathbf{k}_\mathbf{\psi}\)
+            fast when compared to \(\mathbf{\epsilon}_\mathbf{\theta}\) itself. Purple layers are used both in \(\mathbf{\epsilon}_\mathbf{\psi}\) and \(\mathbf{k}_\mathbf{\psi}\); green layers are specific for \(\mathbf{\epsilon}_\mathbf{\psi}\) and \(\mathbf{k}_\mathbf{\psi}\).
+        </p><p class="caption">
+            
+    </section>
+
+
+    <section id="results">
+        <h2>Experimental Results</h2>
+        <hr>
+        <div class="flex-row">
+            <p>We extensively validate GENIE on several popular benchmark datasets for image synthesis, namely, CIFAR-10 (resolution \(32 \times 32\)), LSUN Bedrooms (\(128 \times 128\)), LSUN Church-Outdoor (\(128 \times 128\)), and (conditional) ImageNet (\(64 \times 64\)). We demonstrate that GENIE outperforms all previous solvers as measured by FID score for different numbers of denoising steps during generation. See paper for details.
+            </p>
+            <p>In contrast to recent methods for accerlerated sampling of DDMs that abandon the ODE/SDE framework, GENIE can readily be combined with techniques such as classifier(-free) guidance (see examples below) and image encoding. These techniques can play an important role in synthesizing photorealistic images from DDMs, as well as for image editing tasks.
+            </p>
+            <center>
+                <div class="wrapper">
+                    <figure>
+                    <img width="70%" src="./assets/guidance.png" style="margin-bottom: 0px;">
+                    </figure>
+                </div>  
+                </center>
+                <p class="caption">
+                    Image synthesis with classifier-free guidance for the ImageNet classes Pembroke Welsh Corgi and Streetcar using different numbers of denoising steps during generation.
+                </p><p class="caption">
+            <p>
+                We also train a high-resolution model on AFHQv2 (subset of cats only). We train a base DDM at resolution \(128 \times 128\) and a \(128 \times 128 \rightarrow 512 \times 512\) DDM-based upsampler. We are aiming to test whether GENIE also works for high-resolution image generation and in DDM-based upsamplers, which have become an important ingredient in modern large-scale DDM-based image generation systems.
+            </p>
+        </div>
+        <br> 
+        <center>
+            <div class="wrapper">
+                <figure>
+                <img width="80%" src="./assets/cats_mixed_upsampled.png" style="margin-bottom: 10px;">
+                <img width="80%" src="./assets/cats_mixed_end_to_end.png" style="margin-bottom: 0px;">
+                </figure>
+            </div>  
+            </center>
+            <p class="caption">
+                High-resolution images generated with the \(128 \times 128 \rightarrow 512 \times 512\) GENIE upsampler using only five function evaluations. For the two images at the top, the upsampler is 
+                conditioned on test images from the Cats dataset. For the two images at the bottom, the upsampler is conditioned on samples from the \(128 \times 128\) GENIE base model (using 25 function evaluations); 
+                an upsampler evaluation is roughly four times as expensive as a base model evaluation.
+            </p><p class="caption">
+        <br>
+        <figure>
+            <video class="centered" width="80%" autoplay loop muted playsinline class="video-background " >
+                <source src="assets/vid.mp4#t=0.001" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="caption">
+                The sequence above is generated by randomly traversing the latent space of our GENIE model (using 25 base model and five upsampler evaluations). We are interpolating in the latent space of the base model, and we keep the noise in the upsampler (both latent space and augmentation perturbations) fixed in all frames.
+            </p>
+        </figure>
+    </section>
+    
+    <section id="paper">
+        <h2>Paper</h2>
+        <hr>
+        <div class="flex-row">
+            <div class="download-thumb">
+            <div style="box-sizing: border-box; padding: 16px; margin: auto;">
+                <a href="https://nv-tlabs.github.io/GENIE"><img class="screenshot" src="assets/genie_paper_preview.png"></a>
+            </div>
+        </div>
+            <div class="paper-stuff">
+                <p><b>GENIE: Higher-Order Denoising Diffusion Solvers</b></p>
+                <p>Tim Dockhorn, Arash Vahdat, Karsten Kreis</p>
+                <p><i>Advances in Neural Information Processing Systems, 2022</i></p>
+                <div><span class="material-icons"> description </span><a href="https://arxiv.org/abs/2210.05475"> arXiv version</a></div>
+                <div><span class="material-icons"> insert_comment </span><a href="assets/dockhorn2022genie.bib"> BibTeX</a></div>
+                <div><span class="material-icons"> integration_instructions </span><a href="https://github.com/nv-tlabs/GENIE"> Code</a></div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bibtex">
+        <h2>Citation</h2>
+        <hr>
+        <pre><code>@article{dockhorn2022genie,
+        title={{GENIE: Higher-Order Denoising Diffusion Solvers}},
+        author={Dockhorn, Tim and Vahdat, Arash and Kreis, Karsten},
+        journal={Advances in Neural Information Processing Systems},
+        year={2022}
+}</code></pre>
+    </section>
+</div>
+</body>
+</html>
