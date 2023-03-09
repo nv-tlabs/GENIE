@@ -323,7 +323,4 @@ class Model(nn.Module):
                 h = self.up[i_level].upsample(h)
 
         # end
-        h = self.norm_out(h)
-        h = nonlinearity(h)
-        h = self.conv_out(h)
-        return h
+        return self.conv_out(nonlinearity(self.norm_out(h))), h, temb
