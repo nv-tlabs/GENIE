@@ -46,27 +46,6 @@ def get_state(config, local_rank, mode):
 
     return model, ema, optimizer, step
 
-# def get_state(config, local_rank, mode):
-#     model_config = config.diffusion_model
-#     model = get_diffusion_model(model_config).to(config.setup.device)
-
-#     model = DDP(model, device_ids=[local_rank])
-#     ema = EMA(model.parameters(), decay=model_config.ema_rate)
-#     optimizer = get_optimizer(config.optim.optimizer, model.parameters(), **config.optim.params)
-#     step = 0
-
-#     if mode == 'continue':
-#         loaded_state = torch.load(
-#             model_config.ckpt_path, map_location=torch.device('cpu'))
-#         model.load_state_dict(loaded_state['model'], strict=True)
-#         model.to(config.setup.device)
-#         ema.load_state_dict(loaded_state['ema'], device=config.setup.device)
-#         # ema.load_state_dict(loaded_state['ema'])
-#         optimizer.load_state_dict(loaded_state['optimizer'])
-#         step = loaded_state['step']
-
-#     return model, ema, optimizer, step
-
 
 def get_loss_fn(config):
     alpha_fn, sigma_fn = get_alpha_sigma_fn(

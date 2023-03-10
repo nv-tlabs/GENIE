@@ -66,9 +66,9 @@ On ImageNet, we also provide a class-conditional checkpoint, which can be contro
 python main.py --mode eval --config imagenet.eval_conditional --workdir output/testing_sampling/imagenet_genie_conditional/v2/ --sampler ttm2 --labels 1000
 ```
 
-To generate all samples from the same class, you can set ``--labels`` to a single integer between 0 and 999 (inclusive). Alternatively, you can provide a list of samples, for example, ``--labels 0,87,626,3``; note, however, that the length of the list needs to be the same as the total number of generated samples. To sample using random labels, you may set the ``--labels`` flag to the number of classes, for ImageNet that would be `1000`.
+To generate all samples from the same class, you can set ``--labels`` to a single integer between 0 and 999 (inclusive). Alternatively, you can provide a list of labels, for example, ``--labels 0,87,626,3``; note, however, that the length of the list needs to be the same as the total number of generated samples. To sample using random labels, you may set the ``--labels`` flag to the number of classes, for ImageNet that would be `1000`.
 
-Furthermore, since we provide both class-conditinal and unconditional checkpoints, you can generate samples using classifier-free guidance:
+Furthermore, since we provide both class-conditinal and unconditional checkpoints for ImageNet, you can generate samples using classifier-free guidance:
 
 ```shells cript
 python main.py --mode eval --config imagenet.eval_with_guidance --workdir output/testing_sampling/imagenet_genie_guidance/v3 --sampler ttm2 --labels 1000 --guidance_scale 1.
@@ -149,7 +149,7 @@ python compute_fid_statistics.py --path data/processed/cats.zip --file cats.npz
 We provide configurations to reproduce our models [here](configs/). Feel free to use a different numbers of GPUs than us, however, in that case, you should also change the (per GPU) batch size (`config.train.batch_size`) in the corresponding config file. To train the base diffusion models, use the following commands:
 
 ```shell script
-python main.py --mode train --config church.train_diffusion --workdir <new_directory>/ --n_gpus_per_node 8
+python main.py --mode train --config church.train_diffusion --workdir <new_directory> --n_gpus_per_node 8
 python main.py --mode train --config bedroom.train_diffusion --workdir <new_directory> --n_gpus_per_node 8
 python main.py --mode train --config imagenet.train_diffusion --workdir <new_directory> --n_gpus_per_node 8
 python main.py --mode train --config imagenet.train_diffusion_conditional.py --workdir <new_directory> --n_gpus_per_node 8
@@ -157,7 +157,7 @@ python main.py --mode train --config cats.train_diffusion --workdir <new_directo
 python main.py --mode train --config cats.train_diffusion_upsampler --workdir <new_directory> --n_gpus_per_node 8 --n_nodes 2
 ```
 
-To continue an interrupted training run, can run the following command:
+To continue an interrupted training run, you may run the following command:
 
 ```shell script
 python main.py --mode continue --config <config_file> --workdir <existing_working_directory> --ckpt_path <path_to_checkpoint>
@@ -170,7 +170,7 @@ We recommend to use the same number of GPUs (via `--n_gpus_per_node`) and nodes 
 Our GENIE models can be trained using the following commands:
 
 ```shell script
-python main.py --mode train --config church.train_genie --workdir <new_directory>/ --n_gpus_per_node 8
+python main.py --mode train --config church.train_genie --workdir <new_directory> --n_gpus_per_node 8
 python main.py --mode train --config bedroom.train_genie --workdir <new_directory> --n_gpus_per_node 8
 python main.py --mode train --config imagenet.train_genie --workdir <new_directory> --n_gpus_per_node 8
 python main.py --mode train --config imagenet.train_genie_conditional.py --workdir <new_directory> --n_gpus_per_node 8
