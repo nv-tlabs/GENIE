@@ -170,7 +170,7 @@ We recommend to use the same number of GPUs (via `--n_gpus_per_node`) and nodes 
 Our GENIE models can be trained using the following commands:
 
 ```shell script
-python main.py --mode train --config cifar.train_genie --workdir <new_directory> --n_gpus_per_node 8
+python main.py --mode train --config cifar10.train_genie --workdir <new_directory> --n_gpus_per_node 8
 python main.py --mode train --config church.train_genie --workdir <new_directory> --n_gpus_per_node 8
 python main.py --mode train --config bedroom.train_genie --workdir <new_directory> --n_gpus_per_node 8
 python main.py --mode train --config imagenet.train_genie --workdir <new_directory> --n_gpus_per_node 8
