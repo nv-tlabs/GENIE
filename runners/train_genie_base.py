@@ -72,7 +72,7 @@ def get_loss_fn(config):
 
         alpha_t = add_dimensions(alpha_fn(t), len(x.shape) - 1)
         sigma_t = add_dimensions(sigma_fn(t), len(x.shape) - 1)
-        gamma_t = alpha_t / sigma_t
+        gamma_t = sigma_t / alpha_t
         a = 2. * gamma_t / (config.sde.beta_d * (gamma_t ** 2. + 1))
         b = torch.sqrt((config.sde.beta_min / config.sde.beta_d) ** 2. + 2. * torch.log(gamma_t ** 2. + 1.) / config.sde.beta_d)
         dt_dgamma_t =  a / b

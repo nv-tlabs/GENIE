@@ -20,7 +20,7 @@ def get_config():
     config.data.image_size = 32
     config.data.num_channels = 3
     config.data.fid_stats = ['assets/stats/cifar10.npz']
-    config.data.path = '../../ddn/datasets/data/processed/cifar10.zip'
+    config.data.path = 'data/processed/cifar10.zip'
     config.data.num_classes = None
     config.data.dataset_params.xflip = True
     config.data.dataloader_params.num_workers = 1

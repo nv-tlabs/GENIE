@@ -81,7 +81,7 @@ def get_loss_fn(config):
         alpha_aug = add_dimensions(alpha_fn(aug_level), len(x.shape) - 1)
         sigma_aug = add_dimensions(sigma_fn(aug_level), len(x.shape) - 1)
         cond_signal = alpha_aug * resize_fn(x) + sigma_aug * aug_eps
-        gamma_t = alpha_t / sigma_t
+        gamma_t = sigma_t / alpha_t
         a = 2. * gamma_t / (config.sde.beta_d * (gamma_t ** 2. + 1))
         b = torch.sqrt((config.sde.beta_min / config.sde.beta_d) **
                        2. + 2. * torch.log(gamma_t ** 2. + 1.) / config.sde.beta_d)
