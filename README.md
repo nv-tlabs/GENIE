@@ -23,24 +23,24 @@ Optionally, you may also install [NVIDIA Apex](https://github.com/NVIDIA/apex). 
 
 ## Pretrained checkpoints
 
-We provide [pre-trained checkpoints](https://drive.google.com/drive/folders/18BBkidk0pSs1skYSKVH86pJNcsJHJhrU?usp=sharing) for all models presented in the paper. Note that the CIFAR-10 base diffusion model is taken from the [ScoreSDE repo](https://github.com/yang-song/score_sde_pytorch).
+We provide [pre-trained checkpoints](https://drive.google.com/drive/folders/1vwTk2bm94eBZFCvthDPPJa72bAKRFc5U) for all models presented in the paper. Note that the CIFAR-10 base diffusion model is taken from the [ScoreSDE repo](https://github.com/yang-song/score_sde_pytorch).
 
 | Description | Checkpoint path |
 |:----------|:----------|
 | CIFAR-10 base diffusion model | [`work_dir/cifar10/checkpoint_8.pth`](https://drive.google.com/file/d/16_-Ahc6ImZV5ClUc0vM5Iivf8OJ1VSif/view?usp=share_link) |
-| CIFAR-10 base GENIE model | [`work_dir/cifar10/genie_checkpoint_20000.pth`](https://drive.google.com/file/d/1MUYpgHoqo7zrS93a-IH0UWU3j3FelWny/view?usp=share_link) |
-| Church base diffusion model | [`work_dir/church/checkpoint_300000.pth`](https://drive.google.com/file/d/1s1sDyfep6nd7b8D5E85DHGSkHwW_oAiA/view?usp=share_link) |
-| Church base GENIE model | [`work_dir/church/genie_checkpoint_35000.pth`](https://drive.google.com/file/d/1lbXzqkbl0ho9krVySVLj_1bFjdkyXU5r/view?usp=share_link) | 
-| Bedroom base diffusion model | [`work_dir/bedroom/checkpoint_300000.pth`](https://drive.google.com/file/d/1xRtkzinz5Ft4PZeTR0Ob2TFOMCt1Xr_-/view?usp=share_link) |
-| Bedroom base GENIE model | [`work_dir/bedroom/genie_checkpoint_40000.pth`](https://drive.google.com/file/d/1qgPPLQ6bYKLIh3gr41Ni-GN-8k6RoQvA/view?usp=share_link) | 
-| ImageNet base diffusion model | [`work_dir/imagenet/checkpoint_400000.pth`](https://drive.google.com/file/d/1IJa38CLQhyN_e7z1rRL-CMDBJI2FmxJT/view?usp=share_link) |
-| ImageNet base GENIE model | [`work_dir/imagenet/genie_checkpoint_25000.pth`](https://drive.google.com/file/d/1KxiugMAJ11JjUadZz4U7esNtLupeqct3/view?usp=share_link) | 
-| Conditional ImageNet base diffusion model | [`work_dir/imagenet/cond_checkpoint_400000.pth`](https://drive.google.com/file/d/19wwQckiCtk_KPY9snWdkL996z_5tgybH/view?usp=share_link) |
-| Conditional ImageNet base GENIE model | [`work_dir/imagenet/cond_genie_checkpoint_15000.pth`](https://drive.google.com/file/d/1grNa7YbH22EdF3CIF5kz9V50XH1Cuwg_/view?usp=share_link) | 
-| Cats base diffusion model | [`work_dir/cats/base/checkpoint_400000.pth`](https://drive.google.com/file/d/1M0Q3JzNESMzNRVnjVHhGB_1qr8HRK55-/view?usp=share_link) |
-| Cats base GENIE model | [`work_dir/cats/base/genie_checkpoint_20000.pth`](https://drive.google.com/file/d/1L-iwcGkSv52fIvKbXfwJDrGLQ9Q6-9CV/view?usp=share_link) | 
-| Cats diffusion upsampler | [`work_dir/cats/upsampler/checkpoint_150000.pth`](https://drive.google.com/file/d/1IxZ5NvKmGKFNYiJzxQ_1UTv1nxl5Ad3V/view?usp=share_link) |
-| Cats GENIE upsampler | [`work_dir/cats/upsampler/genie_checkpoint_20000.pth`](https://drive.google.com/file/d/1z8Lc7QSY9CkwMXwsFczDr0cfDiji5cUr/view?usp=share_link) | 
+| CIFAR-10 base GENIE model | [`work_dir/cifar10/genie_checkpoint_20000.pth`](https://drive.google.com/file/d/1B6Z-H6-mesl9o2laRbHQLQQv9jaEXN3G/view?usp=share_link) |
+| Church base diffusion model | [`work_dir/church/checkpoint_300000.pth`](https://drive.google.com/file/d/1Wrzkf3j2_FkuAofpNPInmjBzulDI-bG4/view?usp=share_link) |
+| Church base GENIE model | [`work_dir/church/genie_checkpoint_35000.pth`](https://drive.google.com/file/d/1o1-Ek4lJ4OhsWgYpTRODkhim8xxWgEtY/view?usp=share_link) |
+| Bedroom base diffusion model | [`work_dir/bedroom/checkpoint_300000.pth`](https://drive.google.com/file/d/1BpsXuMFnM2wpKnMqdvNitd9b-QMETB0H/view?usp=share_link) |
+| Bedroom base GENIE model | [`work_dir/bedroom/genie_checkpoint_40000.pth`](https://drive.google.com/file/d/167e9zkvJyHOtRg9zTdfAlrhWgh4Nmj7v/view?usp=share_link) |
+| ImageNet base diffusion model | [`work_dir/imagenet/checkpoint_400000.pth`](https://drive.google.com/file/d/1Xze7cKbIySlPlD2Z1RURSstyl2mYxYv6/view?usp=share_link) |
+| ImageNet base GENIE model | [`work_dir/imagenet/genie_checkpoint_25000.pth`](https://drive.google.com/file/d/10yZ63LxvWhzvzOakT_yccwXxqQ0g5je7/view?usp=share_link) |
+| Conditional ImageNet base diffusion model | [`work_dir/imagenet/cond_checkpoint_400000.pth`](https://drive.google.com/file/d/1Uy65Au73g3RXrEmR-Q0OOhjcUUdNGcED/view?usp=share_link) |
+| Conditional ImageNet base GENIE model | [`work_dir/imagenet/cond_genie_checkpoint_15000.pth`](https://drive.google.com/file/d/1hEU7DLm4LcSEOzqq8F9ipTPis10QtMAV/view?usp=share_link) |
+| Cats base diffusion model | [`work_dir/cats/base/checkpoint_400000.pth`](https://drive.google.com/file/d/1Y7bLXepeqMrFqvJZAFZoyFoaPxqfnFPK/view?usp=share_link) |
+| Cats base GENIE model | [`work_dir/cats/base/genie_checkpoint_20000.pth`](https://drive.google.com/file/d/1yaJaik4sr6xaIAWCXVjAVIcbMi7-oGbM/view?usp=share_link) |
+| Cats diffusion upsampler | [`work_dir/cats/upsampler/checkpoint_150000.pth`](https://drive.google.com/file/d/1qOKLM8Gr0ChPjoQfl-EozlXcPoMdrsM1/view?usp=share_link) |
+| Cats GENIE upsampler | [`work_dir/cats/upsampler/genie_checkpoint_20000.pth`](https://drive.google.com/file/d/1Yc-3FdNdsfKrhQbRC-M96eYv_J5-7Xfo/view?usp=share_link) |
 
 ## Unconditional sampling
 
